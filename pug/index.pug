@@ -1,44 +1,57 @@
 extends layout/layout.pug
 
 block content
-    // begin projectNaw
-    section#projectNaw.projectNaw.section
+    //- // begin projectNaw
+    //- section#projectNaw.projectNaw.section
+    //-     .container_center
+    //-         h2.section__title
+    //-             span Навигация по проекту
+    //-         ul(style="font-size:1.25em;")
+    //-             li
+    //-                 a(href="../pages/home/") Главная 
+    //-             li
+    //-                 a(href="../pages/contacts/") Контакты 
+    //- 
+    //- // end projectNaw
+
+
+    // begin testcontent
+    section#testcontent.testcontent.section
         .container_center
             h2.section__title
-                span Навигация по проекту
-            ul(style="font-size:1.25em;")
-                li
-                    a(href="../pages/home/") Главная 
-                li
-                    a(href="../pages/contacts/") Контакты 
+                span testcontent
 
-    // end projectNaw
+            <br>
 
+            .section__text
+                span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-    // begin projectBtn
-    section#projectBtn.projectBtn.section
+    // end testcontent
+
+    // begin previewmenu
+    section#previewmenu.previewmenu.section
         .container_center
-            h2.section__title
-                span Кнопки
-            .section__content
-                a.btn(href="#") Кнопка
-                br
-                br
-                a.btn.btn_sm(href="#") Маленькая кнопка
+            h2.section__title 
+                span preview menu
+            .previewmenu__content
+                nav.navbar#navbar
+                    ul.menu
+                        li.menu-item.current-menu-item
+                            a(href="#") Home
+                        li.menu-item
+                            a(href="#") about
+                        li.menu-item
+                            a(href="#") What We Do
+                        li.menu-item
+                            a(href="#") Portfolio
+                        li.menu-item
+                            a(href="#") Client Stories
+                        li.menu-item
+                            a(href="#") Financing
+                        li.menu-item
+                            a(href="#") Free Estimate
+                        li.menu-item
+                            a(href="#") Blog
 
-    // end projectBtn
 
-    // begin projectModal
-    section#projectModal.projectModal.section
-        .container_center
-            h2.section__title
-                span Модальные окна
-            .section__content
-                a.btn.show_modal_js(href="#info") Собщение
-                br
-                br
-                span.btn.youtubeModal_js#rsDoGqnPE4c Видео
-
-                .youtubeModal-js#rsDoGqnPE4c
-
-    // end projectModal
+    // end previewmenu

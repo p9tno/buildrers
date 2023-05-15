@@ -1,25 +1,22 @@
 header.header
-    .header__content
+    .header__row
         .header__logo
-            a.logo(href="/")
-                img(src="/img/logo.png", alt="alt")
+            .header__col
+                a(href="/").header__item
+                    b ehd
+                    span builders - enviromental home development
 
-        .header__toggle
+        .header__content
+            .header__col
+                a(href="tel:(866) 585-2717").header__item
+                    b Phone:
+                    span (866) 585-2717
 
-        .header__nav
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Новости
-                    li.menu-item
-                        a(href="#") Объявления
-                    li.menu-item
-                        a(href="#") F.A.Q.
-                    li.menu-item
-                        a(href="#") Контакты
-                    li.menu-item.menu-item-has-children
-                        a(href="#") Важное
-                        ul.sub-menu
-                            each item in [1, 2, 3, 4]
-                                li.menu-item
-                                    a(href="#") Важный пункт меню
+                a(href="mailto:info@ehdbuilders.com").header__item
+                    b Email:
+                    span info@ehdbuilders.com
+
+            .header__col
+                .header__item
+                    b Addres:
+                    span 18375 Ventura Blvd. #122Tarzana, CA, 91356

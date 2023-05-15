@@ -74,6 +74,11 @@ $(document).ready(function() {
         }
     }
 
+    $('.navbar__toggle').click(function(event) {
+        $(this).toggleClass('active')
+        $( 'body' ).toggleClass( 'nav-open' );
+    });
+
 
     function scrollPage () {
         $(".toTop").on("click","a", function (event) {
@@ -112,15 +117,7 @@ $(document).ready(function() {
     showModal();
 
 
-    function openMobileNav() {
-        $('.header__toggle').click(function(event) {
-            // console.log('Показ меню');
-            $('.navbar').toggleClass('navbar_open');
-            $('.header__toggle').toggleClass('header__toggle_open');
-            $( 'body' ).toggleClass( 'nav-open' );
-        });
-    };
-    openMobileNav();
+
 
     function activeNav() {
         $('.menu-item').on('click', function() {

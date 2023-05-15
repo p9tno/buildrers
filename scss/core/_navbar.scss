@@ -1,0 +1,142 @@
+.navbar {
+    &__wrap {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        border-right: 1px solid rgba($color_white, 0.2);
+        background-color: $main_color;
+        z-index: 100;
+    }
+
+    &__toggle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        z-index: 1;
+
+        width: 1.125em;
+        height: 2.625em;
+        color: $color_white;
+        border: 0.125em solid;
+        border-top: 0;
+        border-bottom: 0;
+        cursor: pointer;
+
+        &:after,
+        &:before {
+            content: '';
+            display: inline-block;
+            border-left: 0.125em solid;
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -0.0625em;
+            height: 100%;
+            transition: transform 0.3s;
+
+        }
+
+        &.active {
+            border-left-color: transparent;
+            border-right-color: transparent;
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+
+    .menu {
+        counter-reset: line var(--line-num, 0);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        padding-left: 3.5em;
+
+        padding-top: 2em;
+
+    }
+
+    .menu-item {
+        counter-increment: line;
+
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 2em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            position: relative;
+            font-family: $second_font_family;
+            text-decoration: none;
+            color: $main_color;
+            font-size: 1.5em;
+
+            display: inline-block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: -0.375em;
+                left: -2.75em;
+                font-family: $main_font_family;
+                font-size: 0.625em;
+                font-weight: 600;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+
+            &:before {
+                content: '0' counter(line) ' ';
+
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -0.3em;
+                left: 0;
+                width: 0;
+                border-bottom: 0.0625em solid;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                color: $color_info;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        &.current-menu-item {
+            a {
+                color: $color_info;
+
+                &:after {
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+}
+
+.nav-open {
+    overflow: hidden;
+}
