@@ -94,16 +94,19 @@ block content
                     .projects__left
                         h2.section__title
                             span pool installation in west hilis
-                                small.counter-el
 
-                        .projects__img.img
+
+                        .projects__img.img.desktop
                             img(src="../../img/projects_1.jpg", alt="alt")
 
                     .projects__right
                         .projects__img.img
                             img(src="../../img/projects_2.jpg", alt="alt")
+
                         .projects__title
                             span Scope of Work
+                            small.counter-el
+
                         .projects__text
                             span Backyard and pool remodeling ・ outdoors kitchen ・ fire pit ・ interlocking pavers and synthetic turf installation.
             //- end row
@@ -111,16 +114,18 @@ block content
 
             //- begin row
             .projects__row.counter-item
-                .projects__title
-                    span Materials used
-                        small.counter-el
                 .projects__grid
-                    each item in [{img: '3', label: 'Angelus pavers in adobe copper mocha color'}, {img: '4', label: 'Pool finished with mini pebble'}, {img: '5', label: 'Pour-in-place coping, custom spillway'}, {img: '6', label: 'Kitchen - granite countertops'}, {img: '7', label: 'Fire pit - stone veneer with Bellecrete cap'}]
-                        .projects__item
-                            .projects__img.img
-                                img(src="../../img/projects_"+item.img+".jpg", alt="alt")
-                            .projects__label
-                                span=item.label
+                    .projects__title
+                        span Materials used  
+                        small.counter-el
+
+                    .projects__list
+                        each item in [{img: '3', label: 'Angelus pavers in adobe copper mocha color'}, {img: '4', label: 'Pool finished with mini pebble'}, {img: '5', label: 'Pour-in-place coping, custom spillway'}, {img: '6', label: 'Kitchen - granite countertops'}, {img: '7', label: 'Fire pit - stone veneer with Bellecrete cap'}]
+                            .projects__item
+                                .projects__img.img
+                                    img(src="../../img/projects_"+item.img+".jpg", alt="alt")
+                                .projects__label
+                                    span=item.label
             //- end row
 
 
@@ -130,15 +135,17 @@ block content
                     .projects__left
                         .projects__title
                             span Work process
-                                small.counter-el
+                            small.counter-el
 
                         .projects__text
-                            span After securing the necessary permits we broke ground with demolition, followed by underground plumbing and electrical work we then formed and poured coping, installed all the pavers, turf and built the fire pit, seating area and outdoor kitchen. 
-
-                    .projects__right
+                            span After securing the necessary permits we broke ground with demolition, followed by underground plumbing and electrical work we then formed and poured coping, installed all the pavers, turf and built the fire pit, seating area and outdoor kitchen.
 
                         .projects__img.img
                             img(src="../../img/projects_8.jpg", alt="alt")
+
+                    .projects__right.desktop
+                        .projects__img.img
+                            img(src="../../img/projects_9.jpg", alt="alt")
 
             //- end row
 
@@ -147,7 +154,7 @@ block content
             .projects__row.counter-item
                 .projects__title
                     span project Gallery
-                        small.counter-el
+                    small.counter-el
                 .projects__slider
                     .swiper.swiper_projects_js
                         .swiper-wrapper
@@ -155,13 +162,13 @@ block content
                                 .swiper-slide
                                     .projects__slide
                                         .projects__img
-                                            img(src="../../img/projects_"+item.img+".jpg", alt="alt")
+                                            img(src="../../img/projects_"+item+".jpg", alt="alt")
                                             .projects__category
                                                 span category
                                         .projects__location
                                             span location
                                         .projects__text
-                                            span Smooth plaster finish is durable and easy to maintain, making it a popular choice for homeowners who want a pool that looks great and requires minimal upkeep.
+                                            span Smooth plaster finish is durable and easy to maintain, making it a popular choice for homeowners who want a pool that looks great and requires minimal upkeep.
 
             //- end row
 
