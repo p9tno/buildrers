@@ -5,12 +5,17 @@
 @import "../fonts/icon/style.css";
 @import 'core/reset';
 @import 'core/template';
-@import 'core/preloader';
-@import 'core/toTop';
+// @import 'core/preloader';
+// @import 'core/toTop';
 @import 'core/messenger';
 @import 'core/navbar';
 
 @import 'core/header';
+
+@import 'sections/head';
+@import 'sections/introduction';
+@import 'sections/materials';
+@import 'sections/projects';
 
 @import 'core/footer';
 
@@ -18,7 +23,7 @@
 
 @import 'core/breadcrumb';
 
-@import 'core/pagination';
+// @import 'core/pagination';
 
 @import 'core/buttons';
 

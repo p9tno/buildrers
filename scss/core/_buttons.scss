@@ -1,9 +1,14 @@
 // Style for button and pseudo button for input and link
 
 .btn {
-	display: inline-block;
-	padding: 1em 2em;
-	border-radius: 1em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 8.125em;
+	height: 8.125em;
+	border-radius: 100%;
+
 	border: none;
 	outline: none;
 	max-width: 100%;
@@ -14,25 +19,41 @@
 	text-decoration: none;
 	text-align: center;
 
-	color: $main_color;
-	background-color: $color_primary;
+	color: $color_white;
+	background-color: $color_info;
 
 	cursor: pointer;
 	transition: 0.3s;
 
-	&:hover {
-		// background-color: $btn_default_bg_color_hover;
-		// color: $btn_default_text_color;
+	span {
+		font-size: 0.75em;
+		font-weight: 700;
+		font-style: italic;
+		text-transform: uppercase;
+
+		&:after {
+			content: '\e905';
+			font-family: 'icomoon';
+			font-weight: 400;
+			font-style: normal;
+			font-size: 0.8em;
+			margin-left: 1.75em;
+
+		}
 	}
 
-	&:active,
-	&:focus {
-		// background-color: $btn_default_bg_color_active;
-		// color: $btn_default_text_color;
+	&:hover {
+		background-color: darken($color_info, 2%);
+
+	}
+
+	&:active {
+		background-color: $color_info;
+
 	}
 
 	&:disabled {
-		color: red;
+		background-color: darken($color_info, 5%);
 		cursor: not-allowed;
 		// pointer-events: none;
 	}

@@ -1,0 +1,136 @@
+.materials {
+    .container_center {
+        @media (min-width: 768px) {
+            max-width: 77em;
+        }
+    }
+
+    .section__title {
+        color: $color_white;
+    }
+
+    .section__text {
+        color: $color_primary;
+    }
+
+    background-color: $main_color;
+
+    &__wrap {
+        margin-top: 2em;
+        @media (min-width: 768px) {
+            margin-top: 5em;
+
+        }
+    }
+
+    &__inner {
+        background-color: $color_white;
+        @media (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__content {
+        padding: 1.25em 1em;
+        @media (min-width: 768px) {
+            padding: 3.75em;
+            min-height: 33.25em;
+        }
+    }
+
+    &__title {
+        font-family: $second_font_family;
+        font-weight: 400;
+        font-size: 1em;
+        margin: 0;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        line-height: 1.675;
+
+        margin-bottom: 1.375em;
+
+        span {
+            font-size: 1em;
+            display: inline-block;
+
+            @media (min-width: 768px) {
+                font-size: 1.375em;
+
+            }
+        }
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        margin-top: 1.25em;
+
+        @media (min-width: 768px) {
+            margin-top: 2em;
+        }
+
+        span {
+            font-size: 1em;
+            font-weight: 500;
+        }
+    }
+
+    &__list {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 1.75em;
+
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 1em;
+            padding-left: 3em;
+
+            @media (min-width: 768px) {
+                margin-bottom: 1.625em;
+                padding-left: 3.625em;
+
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            i {
+                position: absolute;
+                top: 0.25em;
+                left: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 2.625em;
+                height: 2.625em;
+                border-radius: 100%;
+
+                background-color: $main_color;
+                color: $color_white;
+                font-size: 0.75em;
+                @media (min-width: 768px) {
+                    font-size: 1em;
+                }
+
+                &:before {
+                    font-size: 0.75em;
+                }
+            }
+
+        }
+    }
+
+    &__img {
+        height: 19.375em;
+        @media (min-width: 768px) {
+            height: auto;
+            flex: none;
+            width: 36.75em;
+        }
+    }
+
+}

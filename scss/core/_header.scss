@@ -1,9 +1,14 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	padding: 1.632em 0;
 	background-color: $main_color;
 	border-bottom: 1px solid rgba($color_white, 0.2);
+
+	padding: 0.75em 0;
+	@media (min-width: 768px) {
+		padding: 1.632em 0;
+
+	}
 
 	&__row {
 		@extend .container_center;
@@ -23,13 +28,20 @@
 		display: block;
 		text-decoration: none;
 		color: $color_white;
-		width: 12.5em;
 		text-transform: uppercase;
 		line-height: 1.15;
 
+		@media (min-width: 768px) {
+			width: 12.5em;
+		}
+
 		b,
 		span {
-			font-size: 0.75em;
+			font-size: 0.6875em;
+			@media (min-width: 768px) {
+				font-size: 0.75em;
+
+			}
 		}
 
 		b {

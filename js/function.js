@@ -165,7 +165,7 @@ $(document).ready(function() {
             }).eq(0).addClass('active');
         });
     }
-    // doTabs();
+    doTabs();
 
     function doDrop() {
         $('.drop__toggle').on('click', function() {

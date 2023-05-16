@@ -1,0 +1,169 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+    // begin head
+    section#head.head.section
+        .head__img
+            img(src="../../img/service.webp", alt="alt")
+        .container_center
+            .head__content
+                .breadcrumbs
+                    .aioseo-breadcrumbs
+                        span.aioseo-breadcrumb
+                            a(href="#") Home 
+
+                        span.aioseo-breadcrumb-separator /
+
+                        span.aioseo-breadcrumb pool and spa
+
+
+                h1.section__title
+                    span pool and spa
+
+
+    // end head
+
+    // begin introduction
+    section#introduction.introduction.section
+        .container_center
+            .introduction__wrap
+                .introduction__content
+                    .introduction__label
+                        span / Introduction
+                    h2.section__title
+                        span we make your dream po ol and spa a reality
+                    .section__text
+                        span At EHD Builders we make your dream pool and spa a reality! We understand that building a new pool or spa is a big investment, and that's why we are dedicated to providing you with the best construction services possible. Our skilled contractors are experienced in all aspects of pool and spa construction from obtaining plans and permits to excavation and concrete
+                    .introduction__btn
+                        a.btn(href="#")
+                            span read more
+
+                .introduction__gallery
+                    .introduction__img.img
+                        img(src="../../img/introduction_1.jpg", alt="alt")
+                    .introduction__img.img
+                        img(src="../../img/introduction_2.jpg", alt="alt")
+
+    // end introduction
+
+    // begin materials
+    section#materials.materials.section
+        .container_center
+            h2.section__title
+                span Materials We Work With
+
+            .materials__wrap
+
+                .tabs__wrapper
+                    .tabs
+                        each item in ['Smooth plaster finish', 'Shimmering pebble finish', 'Durable quartz finish', ]
+                            .tab
+                                span=item 
+                    .tabs__content
+                        each item in ['', '', '', ]
+                            .tab__item
+                                .materials__inner
+                                    .materials__content
+                                        .materials__title
+                                            span Smooth plaster finish
+                                        .section__text
+                                            span This type of finish is typically made of a mixture of white Portland cement, marble dust, and water, and can be tinted to achieve a variety of colors. Smooth plaster finish is a popular option for new pool installations, as it provides a smooth and elegant surface that is comfortable to swim in.
+                                        .materials__subtitle
+                                            span Perks
+                                        ul.materials__list.list
+                                            each item in ['Smooth plaster finish is durable and easy to maintain, making it a popular choice for homeowners who want a pool that looks great and requires minimal upkeep.', 'Additionally, the smooth surface of the plaster finish can help prevent algae growth, which can be a common problem in swimming pools.', 'Overall, smooth plaster finish is an excellent choice for homeowners looking to create a beautiful and functional pool space.', ]
+                                                li.section__text
+                                                    i.icon_plus
+                                                    span=item
+
+                                    .materials__img.img
+                                        img(src="../../img/materials.jpg", alt="alt")
+
+    // end materials
+
+    // begin projects
+    section#projects.projects.section
+        .container_center.counter-wrap
+
+            //- begin row
+            .projects__row.counter-item
+                .projects__preview
+                    .projects__left
+                        h2.section__title
+                            span pool installation in west hilis
+                                small.counter-el
+
+                        .projects__img.img
+                            img(src="../../img/projects_1.jpg", alt="alt")
+
+                    .projects__right
+                        .projects__img.img
+                            img(src="../../img/projects_2.jpg", alt="alt")
+                        .projects__title
+                            span Scope of Work
+                        .projects__text
+                            span Backyard and pool remodeling ・ outdoors kitchen ・ fire pit ・ interlocking pavers and synthetic turf installation.
+            //- end row
+
+
+            //- begin row
+            .projects__row.counter-item
+                .projects__title
+                    span Materials used
+                        small.counter-el
+                .projects__grid
+                    each item in [{img: '3', label: 'Angelus pavers in adobe copper mocha color'}, {img: '4', label: 'Pool finished with mini pebble'}, {img: '5', label: 'Pour-in-place coping, custom spillway'}, {img: '6', label: 'Kitchen - granite countertops'}, {img: '7', label: 'Fire pit - stone veneer with Bellecrete cap'}]
+                        .projects__item
+                            .projects__img.img
+                                img(src="../../img/projects_"+item.img+".jpg", alt="alt")
+                            .projects__label
+                                span=item.label
+            //- end row
+
+
+            //- begin row
+            .projects__row.counter-item
+                .projects__about
+                    .projects__left
+                        .projects__title
+                            span Work process
+                                small.counter-el
+
+                        .projects__text
+                            span After securing the necessary permits we broke ground with demolition, followed by underground plumbing and electrical work we then formed and poured coping, installed all the pavers, turf and built the fire pit, seating area and outdoor kitchen. 
+
+                    .projects__right
+
+                        .projects__img.img
+                            img(src="../../img/projects_8.jpg", alt="alt")
+
+            //- end row
+
+
+            //- begin row
+            .projects__row.counter-item
+                .projects__title
+                    span project Gallery
+                        small.counter-el
+                .projects__slider
+                    .swiper.swiper_projects_js
+                        .swiper-wrapper
+                            each item in [11,12,11,12,11,12]
+                                .swiper-slide
+                                    .projects__slide
+                                        .projects__img
+                                            img(src="../../img/projects_"+item.img+".jpg", alt="alt")
+                                            .projects__category
+                                                span category
+                                        .projects__location
+                                            span location
+                                        .projects__text
+                                            span Smooth plaster finish is durable and easy to maintain, making it a popular choice for homeowners who want a pool that looks great and requires minimal upkeep.
+
+            //- end row
+
+
+    // end projects

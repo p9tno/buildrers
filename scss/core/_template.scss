@@ -36,6 +36,11 @@ body {
 .section {
 	padding: 2em 0;
 
+	@media (min-width: 768px) {
+		padding: 5em 0;
+
+	}
+
 	&__title {
 		font-family: $second_font_family;
 		font-weight: 400;
@@ -43,9 +48,16 @@ body {
 		margin: 0;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
+		line-height: 1.675;
 
 		span {
-			font-size: 2.5em;
+			font-size: 1.5em;
+			display: inline-block;
+
+			@media (min-width: 768px) {
+				font-size: 2.5em;
+
+			}
 		}
 	}
 
@@ -86,40 +98,10 @@ body {
 
 .img {
 	img {
+		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-	}
-}
-
-.snakeline {
-	a {
-		position: relative;
-		text-decoration: none;
-
-		&:after {
-			content: '';
-			position: absolute;
-			display: inline-block;
-			width: 100%;
-			left: 0;
-			bottom: -0.125em;
-			border-bottom: 0.125em solid;
-			border-color: inherit;
-
-			@media (min-width: 768px) {
-				transition: width 0.3s;
-			}
-		}
-
-		@media (min-width: 768px) {
-			&:hover {
-				&:after {
-					width: 65%;
-				}
-			}
-		}
-
 	}
 }
 

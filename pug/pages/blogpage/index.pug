@@ -1,0 +1,27 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+    // begin head
+    section#head.head.section
+        .head__img
+            img(src="../../img/blog.webp", alt="alt")
+        .container_center
+            .head__content
+                .breadcrumbs
+                    .aioseo-breadcrumbs
+                        span.aioseo-breadcrumb
+                            a(href="#") Home 
+
+                        span.aioseo-breadcrumb-separator /
+
+                        span.aioseo-breadcrumb our blog
+
+
+                h1.section__title
+                    span knowledge base
+
+
+    // end head

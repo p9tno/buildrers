@@ -1,56 +1,90 @@
 .navbar {
     &__wrap {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 80px;
-        border-right: 1px solid rgba($color_white, 0.2);
-        background-color: $main_color;
-        z-index: 100;
+
+        @media (min-width: 768px) {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            border-right: 1px solid rgba($color_white, 0.2);
+            background-color: $main_color;
+            z-index: 100;
+        }
     }
 
     &__toggle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
 
-        z-index: 1;
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
 
-        width: 1.125em;
-        height: 2.625em;
         color: $color_white;
         border: 0.125em solid;
-        border-top: 0;
-        border-bottom: 0;
+
         cursor: pointer;
+
+        @media (max-width: 767px) {
+            width: 2em;
+            height: 1em;
+            border-left: 0;
+            border-right: 0;
+        }
+
+        @media (min-width: 768px) {
+            width: 1.125em;
+            height: 2.625em;
+            border-top: 0;
+            border-bottom: 0;
+        }
 
         &:after,
         &:before {
             content: '';
-            display: inline-block;
-            border-left: 0.125em solid;
-
             position: absolute;
-            top: 0;
-            left: 50%;
-            margin-left: -0.0625em;
-            height: 100%;
+            display: inline-block;
             transition: transform 0.3s;
+
+            @media (max-width: 767px) {
+                border-top: 0.125em solid;
+                top: 50%;
+                margin-top: -0.0625em;
+                left: 0;
+                width: 100%;
+            }
+
+            @media (min-width: 768px) {
+                border-left: 0.125em solid;
+                top: 0;
+                left: 50%;
+                margin-left: -0.0625em;
+                height: 100%;
+            }
 
         }
 
         &.active {
-            border-left-color: transparent;
-            border-right-color: transparent;
-
             &:before {
                 transform: rotate(45deg);
             }
 
             &:after {
                 transform: rotate(-45deg);
+            }
+
+            @media (max-width: 767px) {
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+            }
+            @media (min-width: 768px) {
+                border-left-color: transparent;
+                border-right-color: transparent;
+
             }
         }
 
