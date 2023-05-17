@@ -84,8 +84,19 @@ block content
 
     // end materials
 
+    // begin runningLine
+    .runningLine
+        .runningLine__content
+            .runningLine__list
+                each item in ['', '', '', '', '', '', '', '', '', '', '' ]
+                    .runningLine__item
+                        span Featured Project
+                        span.runningLine__sep / 
+    // end runningLine
+
     // begin projects
     section#projects.projects.section
+
         .container_center.counter-wrap
 
             //- begin row
@@ -186,9 +197,29 @@ block content
             //- end row
 
 
-
-
-
-
-
     // end projects
+
+    // begin process
+    section#process.process.section
+        .container_center
+            h2.section__title
+                span Our Process
+            .section__text
+                span It's worth noting that the exact steps may vary depending on the specific type of pool and the location of the installation. A professional pool installation company can guide you through the process and ensure that your new pool is built to your satisfaction.
+
+            .process__grid
+                each item in [ {img: '1', title: 'Design consultation', text: 'The first step is to consult with a pool design professional to discuss your preferences, budget, and space requirements. They will help you determine the size, shape, and features of your new pool'}, {img: '2', title: 'Permits and approvals', text: 'Before construction can begin, the necessary permits and approvals must be obtained from local authorities. This includes zoning, building, and safety permits.'}, {img: '3', title: 'Excavation', text: 'Once the permits are obtained, excavation can begin. This involves digging a hole in the ground to the size and shape of the poo'}, {img: '4', title: 'Concrete / vinyl liner installation', text: 'Depending on the type of pool you choose, either a concrete or vinyl liner is installed to cover the framing and create the pools surface'}, {img: '5', title: 'Electrical installation', text: 'The next step is to install the electrical systems for the pool, such as lighting and control systems'}, {img: '6', title: 'Framing and plumbing', text: 'After the excavation is complete, the pools framing and plumbing systems are installed. This includes the pool shell, plumbing lines, and equipment such as pumps, filters, and heaters'}, {img: '7', title: 'Deck and landscaping', text: 'Once the pool shell is complete, the surrounding area is finished with decking and landscaping. This can include patios, walkways, and plants.'}, {img: '8', title: 'Fill and start-up', text: 'Finally, the pool is filled with water and the equipment is started up. Chemical sare added to balance the water chemistry, and the pool is ready for use!'}, ]
+
+                    .process__item
+                        .process__img.img
+                            img(src="../../img/process_"+item.img+".svg", alt="alt")
+
+                        .process__title
+                            span=item.title
+                        .section__text
+                            span=item.text
+
+
+
+
+    // end process

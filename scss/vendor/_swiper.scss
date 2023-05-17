@@ -42,10 +42,10 @@
             width: 3.75em;
             height: 3.75em;
             border: 1px solid;
-            border-color: $main_color;
+            border-color: #9DAFB5;
             border-radius: 100%;
 
-            color: $main_color;
+            color: #9DAFB5;
 
             cursor: pointer;
             outline: none;
@@ -56,13 +56,13 @@
             }
 
             &:hover {
-                color: darken($color_info, 10%);
-                border-color: darken($color_info, 10%);
+                color: $main_color;
+                border-color: $main_color;
             }
 
             &.swiper-button-disabled {
-                color: #9DAFB5;
-                border-color: #9DAFB5;
+                color: rgba($color_primary, 0.25);
+                border-color: rgba($color_primary, 0.25);
                 cursor: not-allowed;
             }
 

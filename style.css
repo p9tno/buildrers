@@ -1410,6 +1410,125 @@ body {
   }
 }
 
+.process {
+  background-color: #006083;
+  color: #ffffff;
+}
+.process .section__title {
+  margin-bottom: 2em;
+}
+.process .section__text {
+  max-width: 29.375em;
+}
+@media (min-width: 768px) {
+  .process .section__text {
+    text-align: justify;
+  }
+}
+.process__grid {
+  margin-top: 2em;
+}
+@media (min-width: 768px) {
+  .process__grid {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3.75em;
+    grid-column-gap: 12.5em;
+  }
+}
+.process__item {
+  margin-bottom: 2em;
+  text-align: center;
+}
+.process__item:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .process__item {
+    margin-bottom: 0;
+    text-align: left;
+    position: relative;
+  }
+  .process__item:after {
+    content: "";
+    position: absolute;
+    top: 1.5em;
+    right: -7em;
+    display: block;
+    width: 14.125em;
+    height: 2.8125em;
+    background-image: url("../../img/arrow_right.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .process__item:nth-child(3):after {
+    content: none;
+  }
+  .process__item:nth-child(3):before {
+    content: "";
+    position: absolute;
+    bottom: -10em;
+    right: 1em;
+    width: 5.4375em;
+    height: 10.125em;
+    background-image: url("../../img/arrow_bottom_left.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .process__item:nth-child(4):after {
+    background-image: url("../../img/arrow_left.svg");
+  }
+  .process__item:nth-child(4):before {
+    content: "";
+    position: absolute;
+    bottom: -4em;
+    left: -6em;
+    width: 4.4375em;
+    height: 10.4375em;
+    background-image: url("../../img/arrow_bottom_right.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .process__item:nth-child(5):after {
+    background-image: url("../../img/arrow_left.svg");
+  }
+  .process__item:nth-child(6):after {
+    content: none;
+  }
+  .process__item:last-child:after {
+    content: none;
+  }
+}
+.process__img {
+  width: 9.25em;
+  height: 9.25em;
+  font-size: 0.75em;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .process__img {
+    font-size: 1em;
+    margin: 0;
+  }
+}
+.process__title {
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+@media (min-width: 768px) {
+  .process__title {
+    margin: 2.625em 0 1.25em;
+  }
+}
+.process__title span {
+  font-size: 1em;
+  font-weight: 500;
+}
+
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
@@ -1921,6 +2040,48 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   background: #e6e6e6;
 }
 
+.runningLine {
+  background-color: #006083;
+  padding-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  .runningLine {
+    padding-bottom: 0.875em;
+  }
+}
+.runningLine__content {
+  overflow: hidden;
+}
+.runningLine__list {
+  display: flex;
+}
+.runningLine__item {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.runningLine__item span {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.75em;
+}
+@media (min-width: 768px) {
+  .runningLine__item span {
+    font-size: 0.875em;
+  }
+}
+.runningLine__sep {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+@media (min-width: 768px) {
+  .runningLine__sep {
+    margin: 0 1.25em;
+  }
+}
+.runningLine .js-marquee {
+  margin-right: 0 !important;
+}
+
 .modal {
   display: none;
   overflow: auto;
@@ -2127,9 +2288,9 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     width: 3.75em;
     height: 3.75em;
     border: 1px solid;
-    border-color: #006083;
+    border-color: #9DAFB5;
     border-radius: 100%;
-    color: #006083;
+    color: #9DAFB5;
     cursor: pointer;
     outline: none;
     transition: 0.3s;
@@ -2138,12 +2299,12 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
     font-size: 0.875em;
   }
   .swiper__arrows i:hover {
-    color: #0f6f76;
-    border-color: #0f6f76;
+    color: #006083;
+    border-color: #006083;
   }
   .swiper__arrows i.swiper-button-disabled {
-    color: #9DAFB5;
-    border-color: #9DAFB5;
+    color: rgba(96, 112, 118, 0.25);
+    border-color: rgba(96, 112, 118, 0.25);
     cursor: not-allowed;
   }
 }

@@ -3,7 +3,7 @@ $(document).ready(function() {
         slidesPerView: 1,
         spaceBetween: 10,
         speed: 500,
-        // loop: true,
+        loop: true,
         autoplay: {
           delay: 5000,
         },

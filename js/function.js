@@ -79,6 +79,14 @@ $(document).ready(function() {
         $( 'body' ).toggleClass( 'nav-open' );
     });
 
+    $(function() {
+        $('.runningLine__content').marquee({
+            duration: 60000,
+            startVisible: true,
+            duplicated: true
+        });
+    });
+
 
     function scrollPage () {
         $(".toTop").on("click","a", function (event) {
