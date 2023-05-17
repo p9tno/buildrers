@@ -152,16 +152,18 @@ block content
 
             //- begin row
             .projects__row.counter-item
-                .projects__title
-                    span project Gallery
-                    small.counter-el
                 .projects__slider
+
+                    .projects__title
+                        span project Gallery
+                        small.counter-el
+
                     .swiper.swiper_projects_js
                         .swiper-wrapper
-                            each item in [11,12,11,12,11,12]
+                            each item in [11,10,11,10,11,10]
                                 .swiper-slide
-                                    .projects__slide
-                                        .projects__img
+                                    a.projects__slide(href="#")
+                                        .projects__img.img
                                             img(src="../../img/projects_"+item+".jpg", alt="alt")
                                             .projects__category
                                                 span category
@@ -170,7 +172,23 @@ block content
                                         .projects__text
                                             span Smooth plaster finish is durable and easy to maintain, making it a popular choice for homeowners who want a pool that looks great and requires minimal upkeep.
 
+                    .swiper__arrows.desktop
+                        i.icon_arrow_left
+                        i.icon_arrow_right
+
+                    .swiper__dotted.projects_dotted_js.mobile
+
+
+                .projects__btn
+                    a.btn(href="#")
+                        span View More Projects
+
             //- end row
+
+
+
+
+
 
 
     // end projects
