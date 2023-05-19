@@ -219,7 +219,36 @@ block content
                         .section__text
                             span=item.text
 
-
-
-
     // end process
+
+    // begin services
+    section#services.services.section
+        .container_center
+            .services__caption
+                h2.section__title
+                    span Additional Services
+                .swiper__arrows.swiper__arrows_reverse.desktop
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+            .services__slider
+                .swiper.swiper_services_js
+                    .swiper-wrapper
+                        each item in [ {title: 'Lighting options', text: 'Some popular options for pool lighting include LED lighting, fiber optic lighting, and solar lighting. LED lighting is energy-efficient and long-lasting, offering a range of colors and customization options. Fiber optic lighting creates a stunning and unique visual effect, with small fiber optic strands that transmit light throughout the pool area. Solar lighting is an eco-friendly option, powered by the sun and easy to install.', img: '1'}, {title: 'Pool fencing', text: 'Pool fencing can be made from a variety of materials, including aluminum, vinyl, and glass. Each material has its own advantages and can be customized to fit the specific needs of the homeowner. Pool fencing not only provides safety but also adds an aesthetic appeal to the pool area, creating a clean and elegant look.  Some pool fencing options come with locking mechanisms, further enhancing the safety and security of the pool area.', img: '2'}, {title: 'Pool decking', text: 'The deck serves as a functional area for swimmers to lounge, sunbathe, and enter and exit the pool. Pool decking can be made from a variety of materials, including concrete, wood, and stone. Each material has its own advantages, with concrete being a durable and low-maintenance option, wood offering a warm and natural feel, and stone providing a luxurious and high-end look. Pool decking can also be customized to fit the specific needs of the homeowner, with options such as slip-resistant surfaces, built-in seating, and customized lighting.', img: '3'}, {title: 'Lighting options', text: 'Some popular options for pool lighting include LED lighting, fiber optic lighting, and solar lighting. LED lighting is energy-efficient and long-lasting, offering a range of colors and customization options. Fiber optic lighting creates a stunning and unique visual effect, with small fiber optic strands that transmit light throughout the pool area. Solar lighting is an eco-friendly option, powered by the sun and easy to install.', img: '1'}, {title: 'Pool fencing', text: 'Pool fencing can be made from a variety of materials, including aluminum, vinyl, and glass. Each material has its own advantages and can be customized to fit the specific needs of the homeowner. Pool fencing not only provides safety but also adds an aesthetic appeal to the pool area, creating a clean and elegant look.  Some pool fencing options come with locking mechanisms, further enhancing the safety and security of the pool area.', img: '2'}, {title: 'Pool decking', text: 'The deck serves as a functional area for swimmers to lounge, sunbathe, and enter and exit the pool. Pool decking can be made from a variety of materials, including concrete, wood, and stone. Each material has its own advantages, with concrete being a durable and low-maintenance option, wood offering a warm and natural feel, and stone providing a luxurious and high-end look. Pool decking can also be customized to fit the specific needs of the homeowner, with options such as slip-resistant surfaces, built-in seating, and customized lighting.', img: '3'}, ]
+                            .swiper-slide
+                                a.services__slide(href="#")
+                                    .services__content
+                                        .services__title
+                                            span=item.title
+                                        .section__text
+                                            span=item.text
+
+                                    .services__img.img
+                                        img(src="../../img/services_"+item.img+".jpg", alt="alt")
+
+                .swiper__dotted.swiper__dotted_reverse.services_dotted_js.mobile
+
+            .services__btn
+                a.btn(href="#")
+                    span Knowledge Base
+
+    // end services
