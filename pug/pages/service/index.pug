@@ -252,3 +252,49 @@ block content
                     span Knowledge Base
 
     // end services
+
+    // begin reconstruction
+    section#reconstruction.reconstruction.section
+        .container_center
+            h2.section__title
+                span Our New Po and Spa Services
+            .section__text
+                span At EHD Builders, we are proud to serve clients throughout the San Fernando Valley, providing high-quality exterior remodeling services that enhance the beauty, functionality, and value of their homes.
+            .reconstruction__list
+                each item in [ {img: '1', title: 'Calabasas'}, {img: '2', title: 'Encino'}, {img: '3', title: 'Sherman Oaks'}, {img: '4', title: 'Woodland Hills'}, {img: '5', title: 'villa barra'}, {img: '6', title: 'West hills'} ]
+                    a(href="#").reconstruction__item
+                        .reconstruction__img.img
+                            img(src="../../img/reconstruction_"+item.img+".jpg", alt="alt")
+                        .reconstruction__title
+                            span=item.title
+
+    // end reconstruction
+
+    // begin faq
+    section#faq.faq.section
+        .faq__img.img.desktop
+            img(src="../../img/faq.webp", alt="alt")
+        .container_center
+            h2.section__title
+                span Faq
+            .faq__content
+                .collapse(data-collapse-wrapper="")
+                    .collapse__title.open(data-collapse="") 
+                        span HOW SOON CAN YOU SCHEDULE A CONSULTATION?
+                    // Добавить класс open для открытого состояния
+                    .collapse__body.open(data-collapse-body="")
+                        span Call us today and you can set up a free consultation with one of our general contractors for as soon as this after noon.
+
+                each item in ['I ALREADY HAVE A QUOTE, CAN YOU BEAT IT?', 'ALL I HAVE IS AN OUTDATED BATHROOM, AND NO DESIGN IDEAS, CAN YOU HELP?', 'DO YOU OFFER ANY PROMOS RIGHT NOW?']
+                    .collapse(data-collapse-wrapper="")
+                        .collapse__title(data-collapse="") 
+                            span=item
+
+                        .collapse__body(data-collapse-body="")
+                            span Call us today and you can set up a free consultation with one of our general contractors for as soon as this after noon.
+
+
+
+
+
+    // end faq

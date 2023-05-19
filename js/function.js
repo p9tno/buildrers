@@ -161,7 +161,7 @@ $(document).ready(function() {
             }
         });
     }
-    // collapsed();
+    collapsed();
 
     function doTabs () {
         $('.tabs__wrapper').each(function() {
