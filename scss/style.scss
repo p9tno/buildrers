@@ -21,13 +21,16 @@
 @import 'sections/reconstruction';
 @import 'sections/faq';
 
+@import 'sections/blog';
+@import 'sections/singleblog';
+
 @import 'core/footer';
 
 @import 'core/form';
 
 @import 'core/breadcrumb';
-
-// @import 'core/pagination';
+@import 'core/cat';
+@import 'core/pagination';
 
 @import 'core/buttons';
 

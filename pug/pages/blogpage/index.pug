@@ -25,3 +25,63 @@ block content
 
 
     // end head
+
+    // begin blog
+    section#blog.blog.section
+        .container_center
+            .blog__cat
+                ul.cat-list
+                    li.cat-item.current-cat
+                        a(href="#") adu conversions
+                    each item in ['bathroom renovation', 'bathroom trends', 'conversions', 'exterior remodeling', 'home improvement', 'home trends', 'kitchen remodeling', 'remodeling', 'kitchen upgrades', 'outdoor kitchen', 'outdoor remodeling', 'room addition', 'smart bathroom', 'smart home', 'Uncategorized', ]
+                        li.cat-item
+                            a(href="#")=item
+
+            .blog__grid
+                each item in [ {bg: '1', hashtag: '#kitchen upgrades', title: '10 OUTDOOR SUMMER HOME IMPROVEMENT PROJECTS', excerpt: 'Where did the time go? Summer is right around the corner, and that means none other than and that means none other than...', date: 'Apr 30, 2020' }, {bg: '2', hashtag: '#bathroom trends', title: 'BATHROOM TRENDS: 2020 EDITION', excerpt: 'Oh, the times they are a changin’. Applicable to both the current state of affairs and design...', date: 'Mar 19, 2020' }, {bg: '3', hashtag: '#exterior remodeling', title: 'FLAWLESS FIRST IMPRESSIONS: EXTERIOR UPGRADES', excerpt: 'Whether or not you’re planning to sell your house, having great curb appeal is important. Not only...', date: 'Apr 30, 2020' }, {bg: '4', hashtag: '#kitchen upgrades', title: 'SMART STARTER HOME PROJECTS', excerpt: 'Every new adventure begins somewhere, usually with excitement of all the possibilities that lay...', date: 'Mar 19, 2020' }, {bg: '5', hashtag: '#exterior remodeling', title: 'EVERYTHING INCLUDING THE KITC LIVING IN CALIFORNIA', excerpt: 'Let’s talk about outdoor kitchens. When we see them, we’re impressed. The luxury, the convenience, Let’s talk about outdoor kitchens. When we see them, we’re impressed. The luxury, the convenience, Let’s talk about outdoor kitchens. When we see them, we’re impressed. The luxury, the convenience,...', date: 'Mar 19, 2020' }, {bg: '6', hashtag: '#exterior remodeling', title: 'FLAWLESS FIRST IMPRESSIONS: EXTERIOR UPGRADES', excerpt: 'Whether or not you’re planning to sell your house, having great curb appeal is important. Not only...', date: 'Apr 30, 2020' }, {bg: '7', hashtag: '#exterior remodeling', title: 'SMART STARTER HOME PROJECTS', excerpt: 'Every new adventure begins somewhere, usually with excitement of all the possibilities that lay...', date: 'Mar 19, 2020' }, ]
+
+                    .blog__item
+                        .blog__bg.bg(style="background-image: url('../../img/blog_"+item.bg+".jpg')")
+                            ul.blog__hashtag
+                                li
+                                    span=item.hashtag
+
+                        .blog__content
+                            .blog__left
+                                ul.blog__hashtag
+                                    li
+                                        span=item.hashtag
+                                .blog__title
+                                    span=item.title
+                                .blog__excerpt
+                                    span=item.excerpt
+
+                            .blog__right
+                                .blog__btn
+                                    a.btn(href="#")
+                                        span READ more
+                                .blog__time
+                                    i.icon_time
+                                    span 5 min
+                                .blog__date
+                                    span=item.date
+
+                        .blog__link
+                            a(href="#") READ more
+
+
+
+
+
+    // end blog
+
+
+    // start pagination
+    .pagination
+        span.current 1
+        a(href="#") 2
+        span.dots ...
+        a(href="#") 10
+        a.next
+
+    // end pagination

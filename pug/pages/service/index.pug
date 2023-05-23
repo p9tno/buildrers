@@ -256,10 +256,13 @@ block content
     // begin reconstruction
     section#reconstruction.reconstruction.section
         .container_center
-            h2.section__title
-                span Our New Po and Spa Services
-            .section__text
-                span At EHD Builders, we are proud to serve clients throughout the San Fernando Valley, providing high-quality exterior remodeling services that enhance the beauty, functionality, and value of their homes.
+            .reconstruction__caption
+                h2.section__title
+                    span Our New Po and Spa Services
+                .section__text
+                    span At EHD Builders, we are proud to serve clients throughout the San Fernando Valley, providing high-quality exterior remodeling services that enhance the beauty, functionality, and value of their homes.
+                .reconstruction__label
+                    span / Available in San<br> Fernando Valley
             .reconstruction__list
                 each item in [ {img: '1', title: 'Calabasas'}, {img: '2', title: 'Encino'}, {img: '3', title: 'Sherman Oaks'}, {img: '4', title: 'Woodland Hills'}, {img: '5', title: 'villa barra'}, {img: '6', title: 'West hills'} ]
                     a(href="#").reconstruction__item
