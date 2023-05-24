@@ -28,3 +28,126 @@ block content
 
 
     // end head
+
+    // begin project
+    section#project.project.section.counter-wrap
+        //- begin row
+        .project__row.counter-item
+            .container_center
+                .scope
+
+                    .scope__content
+                        h2.section__title
+                            span Scope of Work
+                            small.counter-el
+                        .scope__list
+                            each item in ['Backyard and pool remodeling', 'outdoors kitchen', 'interlocking pavers and synthetic turf installation', 'fire pit', ]
+                                .scope__item
+                                    .scope__check
+                                        i.icon_check
+                                    .scope__text
+                                        span=item
+
+                    .scope__img.img
+                        img(src="../../img/scope.jpg", alt="alt")
+
+        //- end row
+
+        //- begin row
+        .project__row.counter-item
+            .container_center
+                .employ
+                    h2.section__title
+                        span Materials used
+                        small.counter-el
+
+
+                    .employ__list
+                        each item in [{img: '3', label: 'Angelus pavers in adobe copper mocha color'}, {img: '4', label: 'Pool finished with mini pebble'}, {img: '5', label: 'Pour-in-place coping, custom spillway'}, {img: '6', label: 'Kitchen - granite countertops'}, {img: '7', label: 'Fire pit - stone veneer with Bellecrete cap'}]
+                            .employ__item
+                                .employ__img.img
+                                    img(src="../../img/projects_"+item.img+".jpg", alt="alt")
+                                .employ__label
+                                    span=item.label
+
+
+        //- end row
+
+        //- begin row
+        .project__row.counter-item
+            .container_center
+                .work
+                    .work__content
+                        h2.section__title
+                            span WORK PROCESS
+                            small.counter-el
+                        .work__text
+                            span After securing the necessary permits we broke ground with demolition, followed by underground plumbing and electrical work we then formed and poured coping, installed all the pavers, turf and built the fire pit, seating area and outdoor kitchen.
+                        .work__preview.img
+                            img(src="../../img/projects_8.jpg", alt="alt")
+
+
+            .work__img.img.desktop
+                img(src="../../img/projects_9.jpg", alt="alt")
+
+        //- end row
+
+        //- begin row
+        .project__row.counter-item
+            .container_center
+                .gallery
+                    .gallery__caption
+                        h2.section__title
+                            span project<br> Gallery
+                            small.counter-el
+                        .gallery__btn
+                            a.btn(href="#")
+                                span View More Projects
+
+                    .swiper.swiper_projects_js
+                        .swiper-wrapper
+                            each item in [11,10,11,10,11,10]
+                                .swiper-slide
+                                    a.projects__slide(href="#")
+                                        .projects__img.img
+                                            img(src="../../img/projects_"+item+".jpg", alt="alt")
+                                            .projects__category
+                                                span Before
+                                        .projects__location
+                                            span part of the project name
+
+                    .swiper__arrows.swiper__arrows_write.desktop
+                        i.icon_arrow_left
+                        i.icon_arrow_right
+
+                    .swiper__dotted.swiper__dotted_reverse.projects_dotted_js.mobile
+
+
+        //- end row
+
+        //- begin row
+        .project__row.counter-item
+            .container_center
+                .likethis
+                    h2.section__title
+                        span project Gallery
+                        small.counter-el
+
+
+                    .likethis__list
+                        each item in [ {img: '1', title: 'the project name'}, {img: '2', title: 'the project name'}, {img: '3', title: 'the project name'}, {img: '4', title: 'the project name'}, ]
+                            a(href="#").likethis__item
+                                .likethis__img.img
+                                    img(src="../../img/reconstruction_"+item.img+".jpg", alt="alt")
+                                .likethis__title
+                                    span=item.title
+
+                        .likethis__btn
+                            a.btn(href="#")
+                                span GET A QUOTE
+
+        //- end row
+
+
+
+    // end project
