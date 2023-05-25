@@ -27,4 +27,14 @@
 		}
 	}
 
+	&_reverse {
+		.aioseo-breadcrumbs {
+			a,
+			span {
+				color: rgba($main_color, 1);
+			}
+		}
+
+	}
+
 }

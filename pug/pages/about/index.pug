@@ -1,0 +1,105 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+    // begin story
+    section#story.story.section
+        .container_center
+
+            .story__wrap
+                .story__content
+                    .breadcrumbs.breadcrumbs_reverse
+                        .aioseo-breadcrumbs
+                            span.aioseo-breadcrumb
+                                a(href="#") Home 
+
+                            span.aioseo-breadcrumb-separator /
+
+                            span.aioseo-breadcrumb about
+                    h1.section__title
+                        span Transforming Homes, Enhancing Lives: Our Story
+                    .story__text
+                        span EHD Builders, Inc. is a family owned and operated business with over 15 years experience and close to 40 combined in the construction industry. From small jobs to big projects, bathroom to backyard, EHD is here to help guide you. We can complete tasks from light remodeling to ground up construction and home upgrades. When hiring EHD, you can have the piece of mind that it will be performed, managed and finished in a timely and conscious manner with your satisfaction throughout the entire process.
+                .story__video
+                    .video
+                        .video__wrap
+                            .video__play
+                                i.icon_polygon
+
+        .story__img.img.desktop
+            img(src="../../img/story.jpg", alt="alt")
+
+
+
+    // end story
+
+    // begin ourteam
+    section#ourteam.ourteam.section
+        .container_center
+            .ourteam__wrap
+                .ourteam__content
+                    .ourteam__label
+                        span / The Heart and Soul of EHD Builders
+                    h2.section__title
+                        span Our team
+                    .ourteam__text
+                        p At EHD Builders, we believe that our team is the heart and soul of our company. We are proud to employ some of the most skilled and experienced professionals in the industry, and each member of our team brings a unique set of skills and expertise to every project we undertake.
+                        p Whether it's our skilled craftsmen, our talented designers, or our friendly support staff, everyone at EHD Builders is committed to going above and beyond to ensure that our clients receive the highest level of service and support.
+                        p In this section, we invite you to get to know the members of our team a little better. From our company founders to our newest team members, each person at EHD Builders plays a vital role in our success. We are proud of our team and the work that we do, and we are confident that you will be too.
+
+                    .ourteam__nav.desktop
+                        .swiper__arrows
+                            i.icon_arrow_left
+                            .swiper__dotted.swiper__dotted_reverse.dotted_ourteam_js
+                            i.icon_arrow_right
+
+
+
+                .ourteam__slider
+                    .swiper.swiper_ourteam_js
+                        .swiper-wrapper
+                            each item in [1,2,1,2,1]
+                                .swiper-slide
+                                    .ourteam__slide
+                                        .ourteam__img.img
+                                            img(src="../../img/ourteam_"+item+".jpg", alt="alt")
+                                        .ourteam__info
+
+                                            span team member name
+                                            a(href="#") Link in bio
+                .ourteam__nav.mobile
+                    .swiper__dotted.swiper__dotted_reverse.dotted_ourteam_mobile_js
+
+
+    // end ourteam
+
+    // begin approach
+    section#approach.approach.section
+        .container_center
+            .approach__label
+                span / The Heart and Soul of EHD Builders
+            .approach__wrap
+                .approach__content
+                    h2.section__title
+                        span Our Approac to Exterior Remodeling
+                    .approach__img.img
+                        img(src="../../img/approach.jpg", alt="alt")
+
+                .approach__list.counter-wrap
+                    each item in [{title: 'Personalized Approac', text: 'One of the things that truly sets us apart is our personalized approach to each project. We understand that every home and every homeowner is unique, which is why we take the time to get to know our clients and their specific needs and preferences.Personalized Approac', text: 'One of the things that truly sets us apart is our personalized approach to each project. We understand that every home and every homeowner is unique, which is why we take the time to get to know our clients and their specific needs and preferences.'}, {title: 'Highest-Quality Materials', text: 'Our team of skilled craftsmen is dedicated to using only the highest-quality materials, and we take great pride in our attention to detail. We believe that the little things can make a big difference, and we never cut corners or compromise on quality.'}, {title: 'Highest-Quality Materials', text: 'We understand that our success as a company depends on the happiness of our clients, which is why we go above and beyond to ensure that every project is completed on time, on budget, and to the highest standards of quality.'}, ]
+
+                        .approach__item.counter-item
+                            .approach__caption
+                                .approach__number
+                                    span.counter-el
+                                .approach__title
+                                    span=item.title
+                            .approach__text
+                                span=item.text
+
+
+
+
+    // end approach
