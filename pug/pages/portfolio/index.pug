@@ -25,3 +25,61 @@ block content
 
 
     // end head
+
+    // begin portfolio
+    section#portfolio.portfolio.section
+        .container_center
+            .portfolio__cat
+                ul.cat-list
+                    li.cat-item.current-cat
+                        a(href="#")
+                            .cat-img
+                                img(src="../../img/cat_1.jpg", alt="alt")
+                            span Pool and Spa
+
+                    each item in [ {link: 'Hardscaping', img: '2'}, {link: 'Fencing', img: '3'}, {link: 'General Construction', img: '4'}, {link: 'Landscaping', img: '5'}, {link: 'turf installation', img: '6'}, ]
+
+                        li.cat-item
+                            a(href="#")
+                                .cat-img
+                                    img(src="../../img/cat_"+item.img+".jpg", alt="alt")
+                                span=item.link
+
+            h2.section__title
+                span pool and spa
+            .section__text
+                span EHD Builders, Inc. is a family owned and operated business with over 15 years experience and close to 40 combined in the construction industry. From small jobs to big projects, bathroom to backyard, EHD is here to help guide you. We can complete tasks from light remodeling to ground up 
+
+            .portfolio__grid
+                each item in [{img: '1', link: 'Encino', text: ''}, {img: '2', link: 'Calabasas', text: ''}, {img: '3', link: 'Sherman Oaks', text: ''}, {img: '4', link: 'Calabasas', text: ''}, {img: '5', link: 'Woodland Hills', text: 'Let’s talk about outdoor kitchens. When we see them, we’re impressed. The luxury, the convenience, Let’s talk about outdoor'}, {img: '6', link: 'West hills', text: ''}, {img: '7', link: 'villa barra', text: ''}, ]
+
+                    //- start item
+                    .portfolio__item
+                        .portfolio__img.img
+                            img(src="../../img/portfolio_"+item.img+".jpg", alt="alt")
+                        .portfolio__content
+                            .portfolio__title
+                                span=item.link
+                            .portfolio__text
+                                span=item.text
+                        .portfolio__btn
+                            a.btn(href="#")
+                                span read more
+
+                        a(href="#").portfolio__link=item.link
+
+                    //- end item
+
+
+
+    // end portfolio
+
+    // start pagination
+    .pagination
+        span.current 1
+        a(href="#") 2
+        span.dots ...
+        a(href="#") 10
+        a.next
+
+    // end pagination
