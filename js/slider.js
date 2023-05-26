@@ -85,4 +85,25 @@ $(document).ready(function() {
         }
     });
 
+    const testimonials = new Swiper('.swiper_testimonials_js', {
+        slidesPerView: 1,
+        // spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_long_right',
+            prevEl: '.icon_arrow_long_left',
+        },
+        pagination: {
+            el: '.dotted_testimonials_js',
+            clickable: true,
+        },
+
+
+    });
+
 });

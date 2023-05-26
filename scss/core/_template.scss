@@ -28,9 +28,14 @@ body {
 
 .container_center {
 	max-width: $container_width;
-	padding: 0 1em;
+	padding: 0 1.25em;
 	margin-left: auto;
 	margin-right: auto;
+
+	@media (min-width: 768px) {
+		padding: 0 1em;
+
+	}
 }
 
 .section {

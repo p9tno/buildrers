@@ -103,3 +103,72 @@ block content
 
 
     // end approach
+
+    // begin testimonials
+    section#testimonials.testimonials.section
+        .container_center
+            .testimonials__label
+                span / Our Testimonials
+            h2.section__title
+                span From Satisfied Customers to Raving Fans
+            .testimonials__slider
+
+                .swiper.swiper_testimonials_js
+                    .swiper-wrapper
+                        each item in ['', '', '', '', ]
+                            .swiper-slide
+                                .testimonials__content
+
+                                    .testimonials__top
+                                        .testimonials__desc
+                                            .testimonials__img.img
+                                                img(src="../../img/testimonials.jpg", alt="alt")
+                                            .testimonials__info
+                                                span john johndoe
+                                                span 03/03/2023
+
+                                        ul.testimonials__stars.testimonials__stars_5
+                                            li
+                                                i.icon_star
+                                            li
+                                                i.icon_star
+                                            li
+                                                i.icon_star
+                                            li
+                                                i.icon_star
+                                            li
+                                                i.icon_star
+
+                                    .testimonials__bottom
+                                        span We just completed a ADU/garage conversion and new back yard hardscaping project with EHD and feel so fortunate that we chose them as contractors. Eric and Yaniv were wonderful to work with. They communicated options and issues well along the way, responded to questions and concerns promptly, and made things easy every step of the way. Work on the project was consistent and steady and we did not have any foreseeable or avoidable delays thanks to their careful attention. We also thought their work crews were highly skilled and very courteous. We'll definitely use them again for any future projects.
+
+
+                .testimonials__nav.desktop
+                    i.icon_arrow_long_left
+                    i.icon_arrow_long_right
+
+                .swiper__dotted.swiper__dotted_reverse.dotted_testimonials_js.mobile
+
+
+
+    // end testimonials
+
+    // begin exterior
+    section#exterior.exterior.section
+        .exterior__img.img
+            img(src="../../img/exterior.webp", alt="alt")
+        .container_center
+            .exterior__content
+
+                h2.section__title
+                    span Experience the Art of Exterior Remodeling with Us
+
+                .exterior__info
+                    span Call us today for a <b>free in-home estimate!</b>
+
+                .exterior__btn
+                    a.btn(href="#")
+                        span learn more
+
+
+    // end exterior
