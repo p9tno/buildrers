@@ -87,12 +87,11 @@ $(document).ready(function() {
 
     const testimonials = new Swiper('.swiper_testimonials_js', {
         slidesPerView: 1,
-        // spaceBetween: 10,
         speed: 500,
         loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        autoplay: {
+          delay: 5000,
+        },
 
         navigation: {
             nextEl: '.icon_arrow_long_right',
@@ -103,6 +102,21 @@ $(document).ready(function() {
             clickable: true,
         },
 
+
+    });
+
+    const testimonials2 = new Swiper('.swiper_testimonials2_js', {
+        slidesPerView: 1,
+        speed: 500,
+        loop: true,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        navigation: {
+            nextEl: '.icon_arrow_right',
+            prevEl: '.icon_arrow_left',
+        },
 
     });
 

@@ -1,0 +1,183 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+    // begin head
+    section#head.head.head_testimonials.section
+        .head__img
+            img(src="../../img/testimonials_head.jpg", alt="alt")
+        .container_center
+            .head__content
+                .breadcrumbs
+                    .aioseo-breadcrumbs
+                        span.aioseo-breadcrumb
+                            a(href="#") Home 
+
+                        span.aioseo-breadcrumb-separator /
+
+                        span.aioseo-breadcrumb testimonials
+
+
+                h1.section__title
+                    span feedback from our clients
+
+
+
+    // end head
+
+    // begin testimonials
+    section#testimonials.testimonials.testimonials_page.section
+        .container_center
+
+            .testimonials__grid
+                each item in ['', '', '', ]
+                    //- start testimonials__item
+                    .testimonials__item
+                        .testimonials__content
+                            .testimonials__top
+                                .testimonials__desc
+                                    .testimonials__img.img
+                                        img(src="../../img/testimonials.jpg", alt="alt")
+                                    .testimonials__info
+                                        span john johndoe
+                                        span 03/03/2023
+
+                                ul.testimonials__stars.testimonials__stars_4
+                                    li
+                                        i.icon_star
+                                    li
+                                        i.icon_star
+                                    li
+                                        i.icon_star
+                                    li
+                                        i.icon_star
+                                    li
+                                        i.icon_star
+
+                            .testimonials__bottom
+                                p We just completed a ADU/garage conversion and new back yard hardscaping project with EHD and feel so fortunate that we chose them as contractors. Eric and Yaniv were wonderful to work with. 
+                                p They communicated options and issues well along the way, responded to questions and concerns promptly, and made things easy every step of the way. Work on the project was consistent and steady and we did not have any foreseeable or avoidable delays thanks to their careful attention. We also thought their work crews were highly skilled and very courteous. We'll definitely use them again for any future projects.
+
+                    //- end testimonials__item
+
+                //- start testimonials__item
+                .testimonials__item.testimonials__item_full
+                    .testimonials__content
+                        .testimonials__top
+                            .testimonials__desc
+                                .testimonials__img.img
+                                    img(src="../../img/testimonials.jpg", alt="alt")
+                                .testimonials__info
+                                    span john johndoe
+                                    span 03/03/2023
+
+                            ul.testimonials__stars.testimonials__stars_4
+                                li
+                                    i.icon_star
+                                li
+                                    i.icon_star
+                                li
+                                    i.icon_star
+                                li
+                                    i.icon_star
+                                li
+                                    i.icon_star
+
+                        .testimonials__bottom
+                            p We just completed a ADU/garage conversion and new back yard hardscaping project with EHD and feel so fortunate that we chose them as contractors. Eric and Yaniv were wonderful to work with. 
+                            p They communicated options and issues well along the way, responded to questions and concerns promptly, and made things easy every step of the way. Work on the project was consistent and steady and we did not have any foreseeable or avoidable delays thanks to their careful attention. We also thought their work crews were highly skilled and very courteous. We'll definitely use them again for any future projects.
+
+                    .testimonials__detail
+                        .video
+                            .video__wrap(style="background-image: url('../../img/testimonials_all.jpg')")
+                                .video__play
+                                    i.icon_polygon
+
+                //- end testimonials__item
+
+
+                each item in ['', '']
+                    //- start testimonials__item
+                    .testimonials__item.testimonials__item_50
+
+                        .testimonials__content
+                            .testimonials__top
+                                .testimonials__desc
+                                    .testimonials__img.img
+                                        img(src="../../img/testimonials.jpg", alt="alt")
+                                    .testimonials__info
+                                        span john johndoe
+                                        span 03/03/2023
+
+                                ul.testimonials__stars.testimonials__stars_4
+                                    li
+                                        i.icon_star
+                                    li
+                                        i.icon_star
+                                    li
+                                        i.icon_star
+                                    li
+                                        i.icon_star
+                                    li
+                                        i.icon_star
+
+                            .testimonials__bottom
+                                p We just completed a ADU/garage conversion and new back yard hardscaping project with EHD and feel so fortunate that we chose them as contractors. Eric and Yaniv were wonderful to work with. 
+                                p They communicated options and issues well along the way, responded to questions and concerns promptly, and made things easy every step of the way. Work on the project was consistent and steady and we did not have any foreseeable or avoidable delays thanks to their careful attention. We also thought their work crews were highly skilled and very courteous. We'll definitely use them again for any future projects.
+
+                    //- end testimonials__item
+
+                //- start testimonials__item
+                .testimonials__item.testimonials__item_full
+                    .testimonials__content
+                        .testimonials__top
+                            .testimonials__desc
+                                .testimonials__img.img
+                                    img(src="../../img/testimonials.jpg", alt="alt")
+                                .testimonials__info
+                                    span john johndoe
+                                    span 03/03/2023
+
+                            ul.testimonials__stars.testimonials__stars_4
+                                li
+                                    i.icon_star
+                                li
+                                    i.icon_star
+                                li
+                                    i.icon_star
+                                li
+                                    i.icon_star
+                                li
+                                    i.icon_star
+
+                        .testimonials__bottom
+                            p We just completed a ADU/garage conversion and new back yard hardscaping project with EHD and feel so fortunate that we chose them as contractors. Eric and Yaniv were wonderful to work with. 
+                            p They communicated options and issues well along the way, responded to questions and concerns promptly, and made things easy every step of the way. Work on the project was consistent and steady and we did not have any foreseeable or avoidable delays thanks to their careful attention. We also thought their work crews were highly skilled and very courteous. We'll definitely use them again for any future projects.
+
+
+                    .testimonials__detail
+                        .swiper.swiper_testimonials2_js
+                            .swiper-wrapper
+                                each item in ['', '', '', '', ]
+                                    .swiper-slide
+                                        img(src="../../img/testimonials_all.jpg", alt="alt")
+                            .swiper__arrows.swiper__arrows_write
+                                i.icon_arrow_left
+                                i.icon_arrow_right
+
+                //- end testimonials__item
+
+
+    // end testimonials
+
+    // start pagination
+    .pagination
+        span.current 1
+        a(href="#") 2
+        span.dots ...
+        a(href="#") 10
+        a.next
+
+    // end pagination

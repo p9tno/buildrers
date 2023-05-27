@@ -95,4 +95,27 @@
     }
     // end head_sm
 
+    // start testimonials
+
+    &_testimonials {
+        .head__img {
+            display: none;
+            @media (min-width: 768px) {
+                display: block;
+                width: 52.5em;
+            }
+        }
+
+        .head__content {
+            min-height: auto;
+            @media (min-width: 768px) {
+                width: 40em;
+                padding: 17.25em 0 11.875em;
+            }
+        }
+
+    }
+
+    // end testimonials
+
 }

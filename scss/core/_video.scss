@@ -1,19 +1,9 @@
 .video {
 	&__wrap {
 		position: relative;
-		background-image: url("../img/video_bg.webp");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
-
-		width: 16.75em;
-		height: 18.75em;
-		font-size: 1.25em;
-		@media (min-width: 768px) {
-			font-size: 1em;
-
-		}
-
 	}
 
 	&__play {
