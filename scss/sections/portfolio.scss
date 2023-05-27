@@ -237,7 +237,7 @@
     &__btn {
         display: none;
         @media (min-width: 768px) {
-            display: block;
+            // display: block;
             position: absolute;
             bottom: 3.125em;
             right: 4.375em;

@@ -3483,7 +3483,6 @@ body {
 }
 @media (min-width: 768px) {
   .portfolio__btn {
-    display: block;
     position: absolute;
     bottom: 3.125em;
     right: 4.375em;
