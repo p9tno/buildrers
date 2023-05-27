@@ -3278,15 +3278,34 @@ body {
 }
 
 .portfolio {
-  padding: 8.75em 0 2.5em;
+  padding: 2.5em 0;
+}
+@media (min-width: 768px) {
+  .portfolio {
+    padding: 8.75em 0 2.5em;
+  }
+}
+.portfolio__cat {
+  font-size: 0.47em;
+}
+@media (min-width: 768px) {
+  .portfolio__cat {
+    margin: 0;
+    font-size: 1em;
+  }
 }
 .portfolio__cat .cat-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.25em;
+}
+@media (min-width: 768px) {
+  .portfolio__cat .cat-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 .portfolio__cat .cat-item a {
   display: block;
@@ -3323,7 +3342,7 @@ body {
   width: 13.9375em;
   height: 13.9375em;
   border-radius: 0.625em;
-  border: 0.125em solid;
+  border: 2px solid;
   border-color: transparent;
   transition: 0.3s;
 }
@@ -3335,78 +3354,136 @@ body {
   transform: scale(1);
   transition: 0.3s;
 }
+.portfolio__caption {
+  margin-top: 2.5em;
+}
+@media (min-width: 768px) {
+  .portfolio__caption {
+    margin-top: 8.75em;
+    width: 29.375em;
+  }
+}
+.portfolio__desc {
+  text-align: justify;
+  margin-top: 1.125em;
+}
+@media (min-width: 768px) {
+  .portfolio__desc {
+    line-height: 1.6;
+    margin-top: 2.125em;
+  }
+}
+.portfolio__desc span {
+  color: #607076;
+  font-size: 0.75em;
+}
+@media (min-width: 768px) {
+  .portfolio__desc span {
+    font-size: 1em;
+  }
+}
 .portfolio__grid {
-  display: flex;
-  flex-wrap: wrap;
-}
-.portfolio__item {
-  border: 1px solid red;
-  margin-bottom: 6.25em;
-}
-.portfolio__item:nth-child(1) {
-  align-self: flex-end;
-  margin-right: auto;
-}
-.portfolio__item:nth-child(4), .portfolio__item:nth-child(7) {
-  margin-left: auto;
-}
-.portfolio__item:nth-child(1) .portfolio__img, .portfolio__item:nth-child(4) .portfolio__img, .portfolio__item:nth-child(7) .portfolio__img {
-  width: 29.1875em;
-  height: 24.6875em;
-}
-.portfolio__item:nth-child(5) {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
-  height: 37.5em;
-  padding: 4.375em;
-}
-.portfolio__item:nth-child(5) .portfolio__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.portfolio__item:nth-child(5) .portfolio__content {
-  position: relative;
-  display: block;
-}
-.portfolio__item:nth-child(5) .portfolio__link {
-  display: none;
-}
-.portfolio__item:nth-child(5) .portfolio__btn {
-  display: block;
-}
-.portfolio__img {
-  width: 44.375em;
-  height: 37.5em;
-}
-.portfolio__content {
-  display: none;
-  width: 25em;
-  color: #ffffff;
-}
-.portfolio__title {
-  font-family: "Alokary";
-  font-weight: 400;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  line-height: 1.6;
-}
-.portfolio__title span {
-  display: inline-block;
-  font-size: 1.5em;
-}
-.portfolio__text {
   margin-top: 1em;
 }
 @media (min-width: 768px) {
-  .portfolio__btn {
+  .portfolio__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -9.5em;
+  }
+}
+.portfolio__item {
+  margin-bottom: 1.25em;
+}
+@media (min-width: 768px) {
+  .portfolio__item {
+    margin-bottom: 6.25em;
+  }
+  .portfolio__item:nth-child(1) {
+    align-self: flex-end;
+    margin-right: auto;
+  }
+  .portfolio__item:nth-child(2) {
+    transform: translateY(-4.375em);
+  }
+  .portfolio__item:nth-child(4), .portfolio__item:nth-child(7) {
+    margin-left: auto;
+  }
+  .portfolio__item:nth-child(1) .portfolio__img, .portfolio__item:nth-child(4) .portfolio__img, .portfolio__item:nth-child(7) .portfolio__img {
+    width: 29.1875em;
+    height: 24.6875em;
+  }
+  .portfolio__item:nth-child(5) {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 37.5em;
+    padding: 4.375em;
+  }
+  .portfolio__item:nth-child(5) .portfolio__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .portfolio__item:nth-child(5) .portfolio__content {
+    position: relative;
+    display: block;
+  }
+  .portfolio__item:nth-child(5) .portfolio__link {
     display: none;
+  }
+  .portfolio__item:nth-child(5) .portfolio__btn {
+    display: block;
+  }
+}
+.portfolio__img {
+  width: 100%;
+  height: 17.5em;
+}
+@media (min-width: 768px) {
+  .portfolio__img {
+    width: 44.375em;
+    height: 37.5em;
+  }
+}
+.portfolio__content {
+  display: none;
+}
+@media (min-width: 768px) {
+  .portfolio__content {
+    width: 25em;
+    color: #ffffff;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio__title {
+    font-family: "Alokary";
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+  .portfolio__title span {
+    display: inline-block;
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio__text {
+    margin-top: 1em;
+  }
+}
+.portfolio__btn {
+  display: none;
+}
+@media (min-width: 768px) {
+  .portfolio__btn {
+    display: block;
     position: absolute;
     bottom: 3.125em;
     right: 4.375em;
@@ -3419,7 +3496,12 @@ body {
   font-size: 1.125em;
   font-weight: 600;
   text-decoration: none;
-  margin-top: 1.75em;
+  margin-top: 0.75em;
+}
+@media (min-width: 768px) {
+  .portfolio__link {
+    margin-top: 1.75em;
+  }
 }
 
 /* Footer
