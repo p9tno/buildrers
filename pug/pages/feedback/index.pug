@@ -1,0 +1,104 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+block content
+    // begin feedback
+    section#feedback.feedback.section
+        .container_center
+            h1.section__title
+                span free estimate
+
+            .feedback__form
+                form.form(action="send.php")
+                    input(type="hidden" name="subject" value="форма в футоре")
+                    input(type="hidden" name="notspam" value="")
+
+                    .form__content
+
+                        .form__list
+
+                            //- start item
+                            .form__item
+                                .form__label
+                                    span personal information*
+                                .form__grid
+                                    .form__row
+                                        input(type="text" required placeholder="First name")
+                                    .form__row
+                                        input(type="text" required placeholder="Last name")
+
+                            //- end item
+
+                            //- start item
+                            .form__item
+                                .form__label
+                                    span your contact*
+                                .form__grid
+                                    .form__row
+                                        input(type="text" required placeholder="Phone")
+                                    .form__row
+                                        input(type="email" required placeholder="E-mail")
+
+                            //- end item
+
+                            //- start item
+                            .form__item
+                                .form__label
+                                    span your address*
+                                .form__grid
+                                    .form__row
+                                        input(type="text" required placeholder="Address")
+                                    .form__row
+                                        input(type="text" required placeholder="City")
+                                    .form__row
+                                        input(type="text" required placeholder="Alabama")
+                                    .form__row
+                                        input(type="text" required placeholder="Zip Code")
+
+
+                            //- end item
+
+                            //- start item
+                            .form__item
+                                .form__label
+                                    span I'm interested in: *
+                                .form__group
+
+                                    label.form__check
+                                        input(type="checkbox" checked="checked")
+                                        span Pool and Spa
+
+                                    each item in ['Hardscaping', 'Fencing', 'Landscaping', 'General Construction', 'Turf installation']
+
+                                        label.form__check
+                                            input(type="checkbox")
+                                            span=item
+
+
+                            //- end item
+
+                            //- start item
+                            .form__item
+                                .form__label
+                                    span Comment or Message*
+                                .form__grid
+                                    .form__row.form__row_full
+                                        textarea(type="text")
+
+
+                            //- end item
+
+                        .form__img.img.desktop
+                            img(src="../../img/feedback.webp", alt="alt")
+
+                    .form__button
+                        button.btn(type="submit") 
+                            span submit
+
+
+
+
+
+    // end feedback

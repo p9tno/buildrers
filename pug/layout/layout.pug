@@ -1,8 +1,5 @@
 block variable
     -var path = '';
-    //- -var main_style_path = '';
-    //- -var page = true;
-    //- -var pageClass = 'bg';
 
 <!DOCTYPE html>
 html(lang="en")
@@ -19,21 +16,6 @@ html(lang="en")
 
 
     body
-
-        //- begin preloader
-        //- .preloader__wrap#preloader
-        //-     .preloader
-        //-         <div></div>
-        //-         <div></div>
-        //-         <div></div>
-        //-         <div></div>
-        //-         <div></div>
-        //-         <div></div>
-        //-         <div></div>
-        //-         <div></div>
-        //-         <div></div>
-        //- end preloader
-
         .wrapper#wrapper
             include header.pug
 
@@ -41,12 +23,6 @@ html(lang="en")
                 block content
 
             include footer.pug
-
-            //- begin toTop
-            //- .toTop
-            //-     a(href="#wrapper") 
-            //-         i.icon_to_top
-            //- end to
 
             include modal.pug
 

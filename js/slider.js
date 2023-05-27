@@ -109,9 +109,9 @@ $(document).ready(function() {
         slidesPerView: 1,
         speed: 500,
         loop: true,
-        // autoplay: {
-        //   delay: 5000,
-        // },
+        autoplay: {
+          delay: 5000,
+        },
 
         navigation: {
             nextEl: '.icon_arrow_right',
