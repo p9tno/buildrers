@@ -31,48 +31,11 @@ function isTouch() {
     return app.touchDevice();
 } // for touch device
 
-console.log('pathname: ', window.location.pathname);
-console.log('url: ', window.location.href);
-console.log('origin: ', window.location.origin);
 
-window.onload = function () {
-    // console.log('onload');
-    function preloader() {
-        $(()=>{
 
-            setTimeout( () => {
-                let p = $('#preloader');
-                p.addClass('hide');
 
-                setTimeout( () => {
-                    p.remove()
-                },1000);
-
-            },1000);
-        });
-    }
-    preloader();
-    // setTimeout( ()=> preloader(),15000 )
-}
 
 $(document).ready(function() {
-    // console.log('ready');
-    window.addEventListener('resize', () => {
-        // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
-        if (app.resized == screen.width) { return; }
-        app.resized = screen.width;
-        // console.log('resize');
-        // console.log(screen.width);
-        checkOnResize();
-    });
-
-    function checkOnResize() {
-        if (isLgWidth()) {
-            // console.log('isLgWidth');
-        } else {
-            // console.log('isLgWidth else');
-        }
-    }
 
     $('.navbar__toggle').click(function(event) {
         $(this).toggleClass('active')
@@ -86,54 +49,6 @@ $(document).ready(function() {
             duplicated: true
         });
     });
-
-
-    function scrollPage () {
-        $(".toTop").on("click","a", function (event) {
-            event.preventDefault();
-            let id  = $(this).attr('href');
-            let top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 1500);
-        });
-
-        $(window).scroll(function(){
-            if($(window).scrollTop()>500){
-                $('.toTop').fadeIn(900)
-            }else{
-                $('.toTop').fadeOut(700)
-            }
-        });
-    }
-    // scrollPage();
-
-    function showModal() {
-        $('.show_modal_js').on('click', function (e) {
-            e.preventDefault();
-            let id  = $(this).attr('href');
-
-            $(id).modal('show');
-        });
-
-        $('.modal').on('show.bs.modal', () => {
-            // let openedModal = $('.modal.in:not(.popapCalc)');
-            let openedModal = $('.modal');
-            if (openedModal.length > 0) {
-                openedModal.modal('hide');
-            }
-        });
-    }
-    showModal();
-
-
-
-
-    function activeNav() {
-        $('.menu-item').on('click', function() {
-            $('.menu-item').removeClass('current-menu-item');
-            $(this).addClass('current-menu-item');
-        })
-    };
-    // activeNav();
 
     function collapsed() {
         let toggle = $('[data-collapse]');
@@ -174,26 +89,6 @@ $(document).ready(function() {
         });
     }
     doTabs();
-
-    function doDrop() {
-        $('.drop__toggle').on('click', function() {
-            // $('.drop__list').toggleClass('open');
-            $(this).toggleClass('active');
-            $(this).closest('.drop').find('.drop__list').toggleClass('open');
-        });
-    };
-    // doDrop();
-
-
-    function addDataFancybox() {
-        let item = $('.itemForDataFancybox_js');
-        let num = 0;
-        item.each(function(index, el) {
-            $(this).find('a').attr('data-fancybox', num);
-            num++;
-        });
-    }
-    // addDataFancybox();
 
 
 })
