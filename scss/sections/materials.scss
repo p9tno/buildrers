@@ -36,6 +36,61 @@
             padding: 3.75em;
             min-height: 33.25em;
         }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 1.25em;
+
+            @media (min-width: 768px) {
+                margin-top: 1.75em;
+            }
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 1.125em;
+            padding-left: 3.5em;
+            font-size: 0.875em;
+            color: $color_primary;
+
+            @media (min-width: 768px) {
+                margin-bottom: 2em;
+                padding-left: 4.125em;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: '\e90d';
+                font-family: 'icomoon';
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 3.429em;
+                height: 3.429em;
+                border-radius: 100%;
+
+                background-color: $main_color;
+                color: $color_white;
+
+                font-size: 0.65em;
+                @media (min-width: 768px) {
+                    font-size: 0.875em;
+
+                }
+
+            }
+        }
     }
 
     &__title {
@@ -71,56 +126,6 @@
         span {
             font-size: 1em;
             font-weight: 500;
-        }
-    }
-
-    &__list {
-        margin-top: 1.25em;
-        @media (min-width: 768px) {
-            margin-top: 1.75em;
-
-        }
-
-        li {
-            position: relative;
-            margin-bottom: 1em;
-            padding-left: 3em;
-
-            @media (min-width: 768px) {
-                margin-bottom: 1.625em;
-                padding-left: 3.625em;
-
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            i {
-                position: absolute;
-                top: 0.25em;
-                left: 0;
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                width: 2.625em;
-                height: 2.625em;
-                border-radius: 100%;
-
-                background-color: $main_color;
-                color: $color_white;
-                font-size: 0.75em;
-                @media (min-width: 768px) {
-                    font-size: 1em;
-                }
-
-                &:before {
-                    font-size: 0.75em;
-                }
-            }
-
         }
     }
 

@@ -1172,6 +1172,54 @@ body {
     min-height: 33.25em;
   }
 }
+.materials__content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 1.25em;
+}
+@media (min-width: 768px) {
+  .materials__content ul {
+    margin-top: 1.75em;
+  }
+}
+.materials__content li {
+  position: relative;
+  margin-bottom: 1.125em;
+  padding-left: 3.5em;
+  font-size: 0.875em;
+  color: #607076;
+}
+@media (min-width: 768px) {
+  .materials__content li {
+    margin-bottom: 2em;
+    padding-left: 4.125em;
+  }
+}
+.materials__content li:last-child {
+  margin-bottom: 0;
+}
+.materials__content li:before {
+  content: "";
+  font-family: "icomoon";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.429em;
+  height: 3.429em;
+  border-radius: 100%;
+  background-color: #006083;
+  color: #ffffff;
+  font-size: 0.65em;
+}
+@media (min-width: 768px) {
+  .materials__content li:before {
+    font-size: 0.875em;
+  }
+}
 .materials__title {
   font-family: "Alokary";
   font-weight: 400;
@@ -1203,50 +1251,6 @@ body {
 .materials__subtitle span {
   font-size: 1em;
   font-weight: 500;
-}
-.materials__list {
-  margin-top: 1.25em;
-}
-@media (min-width: 768px) {
-  .materials__list {
-    margin-top: 1.75em;
-  }
-}
-.materials__list li {
-  position: relative;
-  margin-bottom: 1em;
-  padding-left: 3em;
-}
-@media (min-width: 768px) {
-  .materials__list li {
-    margin-bottom: 1.625em;
-    padding-left: 3.625em;
-  }
-}
-.materials__list li:last-child {
-  margin-bottom: 0;
-}
-.materials__list li i {
-  position: absolute;
-  top: 0.25em;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.625em;
-  height: 2.625em;
-  border-radius: 100%;
-  background-color: #006083;
-  color: #ffffff;
-  font-size: 0.75em;
-}
-@media (min-width: 768px) {
-  .materials__list li i {
-    font-size: 1em;
-  }
-}
-.materials__list li i:before {
-  font-size: 0.75em;
 }
 .materials__img {
   height: 19.375em;
