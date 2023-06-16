@@ -3964,6 +3964,77 @@ body {
   color: #aaa;
 }
 
+.notfound {
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  background-color: #006083;
+  color: #ffffff;
+}
+.notfound .section__title {
+  font-family: "Gallient";
+}
+.notfound .section__title span {
+  font-size: 6em;
+  line-height: 0.9;
+}
+@media (min-width: 768px) {
+  .notfound .section__title span {
+    font-size: 8.75em;
+  }
+}
+.notfound .section__title span:last-child {
+  display: inline-block;
+  transform: translateY(-0.125em);
+  margin-left: 0.2em;
+}
+.notfound .container_center, .notfound .header__row {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .notfound__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 52.75em;
+  }
+}
+.notfound__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .notfound__content {
+    width: 22em;
+    margin-left: 6.5em;
+  }
+}
+.notfound__info {
+  font-size: 0.875em;
+  text-align: center;
+  margin-top: 1.25em;
+}
+@media (min-width: 768px) {
+  .notfound__info {
+    font-size: 1em;
+    margin-top: 2.5em;
+    width: 20em;
+  }
+}
+.notfound__btn {
+  margin-top: 1.5em;
+}
+@media (min-width: 768px) {
+  .notfound__btn {
+    margin-top: 2.875em;
+  }
+}
+
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {

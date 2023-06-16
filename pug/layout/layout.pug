@@ -22,6 +22,11 @@ html(lang="en")
             main.main_content
                 block content
 
-            include footer.pug
+
+            if !footer
+                //- code
+                include footer.pug
+            else
+                //- code
 
             include scripts.pug

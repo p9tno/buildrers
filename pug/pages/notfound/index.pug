@@ -1,0 +1,26 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    -var footer = true;
+
+block content
+
+    // begin notfound
+    section#notfound.notfound.section
+        .notfound__img.img.desktop
+            img(src="../../img/footer_img.webp", alt="alt")
+        .container_center
+            .notfound__content
+                h1.section__title
+                    span 404 
+                    span :(
+                .notfound__info Unfortunately, this page is lost somewhere in the galaxy of the Internet.
+                .notfound__btn
+                    a.btn(href="/")
+                        span Main page
+
+
+
+
+    // end notfound
