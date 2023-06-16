@@ -3965,7 +3965,7 @@ body {
 }
 
 .notfound {
-  padding: 0;
+  padding: 10em 0;
   height: 100vh;
   position: relative;
   background-color: #006083;
